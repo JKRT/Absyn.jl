@@ -1264,7 +1264,6 @@ assigned special restrictions.
   =#
 
   @Record R_UNIONTYPE begin
-
   end
 
   @Record R_METARECORD begin
@@ -1357,17 +1356,14 @@ end
 
 @Uniontype Ref begin
   @Record RCR begin
-
     cr::ComponentRef
   end
 
   @Record RTS begin
-
     ts::TypeSpec
   end
 
   @Record RIM begin
-
     im::Import
   end
 end
