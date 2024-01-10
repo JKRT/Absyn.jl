@@ -32,11 +32,10 @@
 
 module Absyn
 
-
 using MetaModelica
 #= ExportAll is not good practice but it makes it so that we do not have to write export after each function :( =#
 using ExportAll
-  #= Necessary to write declarations for your uniontypes until Julia adds support for mutually recursive types =#
+#= Necessary to write declarations for your uniontypes until Julia adds support for mutually recursive types =#
 
 @UniontypeDecl ForIterator
 @UniontypeDecl Program
@@ -1155,18 +1154,15 @@ is used to store references to class names, or names inside
 class definitions. =#
 @Uniontype Path begin
   @Record QUALIFIED begin
-
     name #= name =#::Ident
     path #= path =#::Path
   end
 
   @Record IDENT begin
-
     name #= name =#::Ident
   end
 
   @Record FULLYQUALIFIED begin
-
     path::Path
   end
 end
@@ -1181,83 +1177,64 @@ assigned special restrictions.
 =#
 @Uniontype Restriction begin
   @Record R_CLASS begin
-
   end
 
   @Record R_OPTIMIZATION begin
-
   end
 
   @Record R_MODEL begin
-
   end
 
   @Record R_RECORD begin
-
   end
 
   @Record R_BLOCK begin
-
   end
 
   @Record R_CONNECTOR begin
-
   end
 
   @Record R_EXP_CONNECTOR begin
-
   end
 
   @Record R_TYPE begin
-
   end
 
   @Record R_PACKAGE begin
-
   end
 
   @Record R_FUNCTION begin
-
     functionRestriction::FunctionRestriction
   end
 
   @Record R_OPERATOR begin
-
   end
 
   @Record R_OPERATOR_RECORD begin
-
   end
 
   @Record R_ENUMERATION begin
-
   end
 
   @Record R_PREDEFINED_INTEGER begin
-
   end
 
   @Record R_PREDEFINED_REAL begin
-
   end
 
   @Record R_PREDEFINED_STRING begin
-
   end
 
   @Record R_PREDEFINED_BOOLEAN begin
-
   end
 
   @Record R_PREDEFINED_ENUMERATION begin
-
   end
 
   #=  BTH
   =#
 
   @Record R_PREDEFINED_CLOCK begin
-
   end
 
   #=  MetaModelica
